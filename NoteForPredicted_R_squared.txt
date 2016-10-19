@@ -1,0 +1,11 @@
+Use predicted R2 to determine how well the model predicts responses for new observations.
+Larger values of predicted R2 indicate models of greater predictive ability.
+
+Predicted R2 is calculated by systematically removing each observation from the data set, estimating the regression equation,
+and determining how well the model predicts the removed observation.
+Predicted R2 ranges between 0 and 100% and is calculated from the PRESS statistic.
+
+Predicted R2 can prevent over-fitting the model and can be more useful than adjusted
+R2 for comparing models because it is calculated using observations not included in model estimation.
+Over-fitting refers to models that seem to explain the relationship between the predictor and response variables for
+the data set used for model calculation but fail to provide valid predictions for new observations.

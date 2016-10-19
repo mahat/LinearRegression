@@ -18,3 +18,12 @@ Linear Regression Examples
 - Introducing dummy variables
 - Conducting iterative model approach by dealing dummy variables
 - Creating and interpreting results of models
+
+# Utils
+- In Utils.py, you can find Predicted R-Squared code and standard error of estimates calculations.
+- Good explanation of Predicted R-Squared is made by minitab documents and you can find it in NoteForPredicted_R_squared.txt
+
+# Running Code
+- Code is writen in Python 2.7.12. 
+- Numpy, Pandas, Statsmodels and Matplotlib libraries are used
+- If you install Scipy stack you will have all of libraries that are used.
