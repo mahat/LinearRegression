@@ -1,0 +1,16 @@
+Dataset: nuclear_time.dat
+
+Source: J. Park and S. Cho (2010). "Investigating the Effect of Task 
+Complexities on the Response Time of Human Operators to Perform
+Emergency Tasks of Nuclear Power Plants," Annals of Nuclear Energy,
+Vol. 37, pp. 1160-1171.
+
+Description: Times for NPP workers to complete 35 emergency tacks
+of varying complexity (measered by TACOM score). Tasks were completed by
+US and non-US workers.
+
+Variables/Columns
+Task     7-8
+Nationality   16  /* 1=US, 0=non-US   */
+Time to complete task    18-24
+TACOM complexity score   26-32
