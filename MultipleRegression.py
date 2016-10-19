@@ -73,8 +73,6 @@ for i in range(1, len(corr_IV) + 1):
         X = sm.add_constant(X)
         tmpModel = sm.OLS(Y, X)
         tmpResult = tmpModel.fit()
-        # check it is adjusted if not re calculate
-        # R2Adj = tmpResult.rsquared
 
         models.append(tmpModel)
         R2Pred = getRPredicted(Y, X)

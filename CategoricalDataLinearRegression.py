@@ -70,7 +70,6 @@ variableGroups = {
     'c2': ['Dept_1', 'Dept_2'],
     'r1': ['Years']
 }
-print len(variableGroups.keys())
 
 # no need to co-linearity check because only one non categorical data
 # But if we have more non-categorical data then we need to check co-linearity between them

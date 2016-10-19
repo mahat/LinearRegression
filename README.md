@@ -26,4 +26,4 @@ Linear Regression Examples
 # Running Code
 - Code is writen in Python 2.7.12. 
 - Numpy, Pandas, Statsmodels and Matplotlib libraries are used
-- If you install Scipy stack you will have all of libraries that are used.
+- If you install Scipy stack, probably you will have all of libraries that are used.

@@ -63,8 +63,6 @@ plt.title('Train dataset Real vs. Predicted Values')
 plt.legend(['Real Values', 'Predicted Values'])
 plt.show()
 
-# plot residuals
-
 
 # model stats
 print result.summary()
