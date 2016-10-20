@@ -81,3 +81,10 @@ plt.plot(range(len(testY)), testY, 'r*-', range(len(testY)), testPred, 'bo-')
 plt.title('Test Dataset Real vs. Predicted Values')
 plt.legend(['Real Values', 'Predicted Values'])
 plt.show()
+
+# Important Step!
+# plotting residuals to see they are normally distributed
+fig = plt.figure()
+result.resid.hist()
+plt.title('Residual Histogram Plot')
+plt.show()

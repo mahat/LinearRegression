@@ -77,6 +77,7 @@ variableGroups = {
 
 # generating all possible models
 models = []
+results = []
 resultDataFrame = pd.DataFrame(
     columns=('Index', 'Variables', 'Std Error', 'R-Squared ', 'R-Squared-Ajd', 'R-Squared-Pred'))
 Y = train['Salary']
@@ -93,6 +94,7 @@ for i in range(1, len(variableGroups.keys()) + 1):
         # check it is adjusted if not re calculate
         # R2Adj = tmpResult.rsquared
         models.append(tmpModel)
+        results.append(tmpResult)
         R2Pred = getRPredicted(Y, X)
         # insert to result DF
         resultDataFrame.loc[modelIndex] = [modelIndex, ' '.join(list(varSet)),
@@ -105,3 +107,11 @@ for i in range(1, len(variableGroups.keys()) + 1):
 print 'Results for different models'
 print resultDataFrame
 
+
+# model 6 seems the best model
+# Important Step!
+# plotting residuals to see they are normally distributed
+fig = plt.figure()
+results[6].resid.hist()
+plt.title('Residual Histogram Plot')
+plt.show()

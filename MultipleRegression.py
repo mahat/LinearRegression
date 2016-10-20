@@ -62,6 +62,7 @@ for k, v in colinear.iteritems():
 
 # generating all possible models
 models = []
+results = []
 resultDataFrame = pd.DataFrame(
     columns=('Index', 'Variables', 'Std Error', 'R-Squared ', 'R-Squared-Ajd', 'R-Squared-Pred'))
 Y = train['B']
@@ -75,6 +76,7 @@ for i in range(1, len(corr_IV) + 1):
         tmpResult = tmpModel.fit()
 
         models.append(tmpModel)
+        results.append(tmpResult)
         R2Pred = getRPredicted(Y, X)
         # insert to result DF
         resultDataFrame.loc[modelIndex] = [modelIndex, ' '.join(list(varSet)),
@@ -106,3 +108,11 @@ print resultDataFrame
 # Above there is a result table which is created by the code. Model #5 and #6 are very close candidates. They are good at Adj-R2 and Pred-R2, but model #5 is more suitable because it requires less number of variables.
 
 # Last but not least: There is not the best method :) I generally look at these points. Maybe there are better ones. If you find one of these please use them.
+
+
+# Important Step!
+# plotting residuals to see they are normally distributed
+fig = plt.figure()
+results[5].resid.hist()
+plt.title('Residual Histogram Plot')
+plt.show()

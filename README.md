@@ -23,6 +23,9 @@ Linear Regression Examples
 - In Utils.py, you can find Predicted R-Squared code and standard error of estimates calculations.
 - Good explanation of Predicted R-Squared is made by minitab documents and you can find it in NoteForPredicted_R_squared.txt
 
+# Datasets
+I found dataset from internet some of them are from UCI database
+
 # Running Code
 - Code is writen in Python 2.7.12. 
 - Numpy, Pandas, Statsmodels and Matplotlib libraries are used
