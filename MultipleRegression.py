@@ -5,7 +5,7 @@ import statsmodels.api as sm
 from pandas import scatter_matrix
 from scipy.stats.stats import pearsonr
 import matplotlib.pyplot as plt
-from Utils import getRPredicted, getStandartErrorEstimate
+from Utils import getRPredicted, getSampleStandardErrorEstimate
 
 # read data
 rawData = pd.read_csv('./datasets/regressionTestData.txt', delim_whitespace=True)
@@ -80,7 +80,7 @@ for i in range(1, len(corr_IV) + 1):
         R2Pred = getRPredicted(Y, X)
         # insert to result DF
         resultDataFrame.loc[modelIndex] = [modelIndex, ' '.join(list(varSet)),
-                                           getStandartErrorEstimate(tmpResult.resid.values), tmpResult.rsquared,
+                                           getSampleStandardErrorEstimate(tmpResult.resid.values), tmpResult.rsquared,
                                            tmpResult.rsquared_adj, R2Pred]
         modelIndex = modelIndex + 1
 
