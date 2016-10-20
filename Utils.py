@@ -21,9 +21,9 @@ def getRPredicted(Y,X):
     return 1 - (np.sum([(p - r) ** 2 for p, r in zip(predY, realY)]) / np.sum((realY - meanY)**2))
 
 # sample standard error estime code
-# if you want to use population estimate call
 def getSampleStandardErrorEstimate(resid):
     return np.sqrt(np.sum(resid ** 2) / (len(resid) - 2))
 
+# if you want to use population estimate call
 def getPopulationStandardErrorEstimate(resid):
     return np.sqrt(np.sum(resid ** 2) / len(resid))
